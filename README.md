@@ -24,5 +24,9 @@ Find your next best friend with Cat Robot App! Images automatically generated fr
 
 ## Author
 
-**Enora Lecuyer** 
+Enora Lecuyer
+
+## License
+
+MIT License
 
