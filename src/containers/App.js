@@ -15,8 +15,8 @@ class App extends Component {
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response=> response.json())
-      .then(users => {this.setState({ robots: users})});
+      .then(response => response.json())
+      .then(users => { this.setState({ robots: users }) });
   }
 
   onSearchChange = (event) => {
@@ -25,16 +25,16 @@ class App extends Component {
 
   render() {
     const { robots, searchfield } = this.state;
-    const filteredRobots = robots.filter(robot =>{
+    const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !robots.length ?
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'><Emoji symbol="🐈" label="cat"/> Cat Robot App <Emoji symbol="🐈" label="cat"/></h1>
-          <SearchBox searchChange={this.onSearchChange}/>
-            <CardList robots={filteredRobots} />
+          <h1 className='f1'><Emoji symbol="🐈" label="cat" /> Cat Gallery <Emoji symbol="🐈" label="cat" /></h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <CardList robots={filteredRobots} />
         </div>
       );
   }
